@@ -48,11 +48,11 @@ class RefApp extends React.Component {
 						<nav className="header__nav">
 						<ul className="nav__list">
 							<li className="nav__item">
-								<Link to="/Shelter/animals">Animals</Link>
+								<Link to="Shelter/animals">Animals</Link>
 							</li>
 
 							<li className="nav__item">
-								<Link to="/Shelter/today">Today</Link>
+								<Link to="Shelter/today">Today</Link>
 							</li>
 						</ul>
 						</nav>
@@ -62,20 +62,20 @@ class RefApp extends React.Component {
 		
 
 			<Switch>
-				<Route exact path="/Shelter/">
-					{!this.state.login ? <Redirect to="/Shelter/login" /> : <Today />}
+				<Route exact path="Shelter/">
+					{!this.state.login ? <Redirect to="Shelter/login" /> : <Today />}
 				</Route>
-				<Route exact path="/Shelter/animals">
-					{!this.state.login ? <Redirect to="/Shelter/login" /> :	<Animals />}
+				<Route exact path="Shelter/animals">
+					{!this.state.login ? <Redirect to="Shelter/login" /> :	<Animals />}
 				</Route>
 				
-				<Route path="/Shelter/today">
-					{!this.state.login ? <Redirect to="/Shelter/login" /> : <Today />}
+				<Route path="Shelter/today">
+					{!this.state.login ? <Redirect to="Shelter/login" /> : <Today />}
 				</Route>
 				
 
-				<Route path="/Shelter/login">
-					{this.state.login ? <Redirect to="/Shelter/today" /> : <Login onSub={this.authen} />}
+				<Route path="Shelter/login">
+					{this.state.login ? <Redirect to="Shelter/today" /> : <Login onSub={this.authen} />}
 				</Route>
 			</Switch>
 			 

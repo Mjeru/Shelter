@@ -48,7 +48,7 @@ class RefApp extends React.Component {
 						<nav className="header__nav">
 						<ul className="nav__list">
 							<li className="nav__item">
-								<Link to="/animals">Animals</Link>
+								<Link to={process.env.PUBLIC_URL + "/animals"}>Animals</Link>
 							</li>
 
 							<li className="nav__item">

@@ -62,7 +62,7 @@ class RefApp extends React.Component {
 		
 
 			<Switch>
-				<Route exact path="/Shelter">
+				<Route exact path="/">
 					{!this.state.login ? <Redirect to="/login" /> : <Today />}
 				</Route>
 				<Route exact path="/animals">
